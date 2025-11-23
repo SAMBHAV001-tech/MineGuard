@@ -1,0 +1,162 @@
+openapi: 3.0.0
+info:
+  title: MineGuard AI API
+  version: 1.0.0
+  description: API for Rockfall Prediction System (MineGuard AI)
+
+servers:
+  - url: http://127.0.0.1:8000
+    description: Local development server
+
+paths:
+  /:
+    get:
+      summary: Root Endpoint
+      description: Returns a welcome message.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /health:
+    get:
+      summary: Health Check
+      description: Returns the health status of the API.
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+
+  /weather/{lat}/{lon}:
+    get:
+      summary: Get Weather Data
+      description: Fetches weather information from NASA POWER and OpenWeather APIs.
+      parameters:
+        - name: lat
+          in: path
+          required: true
+          schema:
+            type: number
+          description: Latitude
+          example: 20.5
+        - name: lon
+          in: path
+          required: true
+          schema:
+            type: number
+          description: Longitude
+          example: 85.8
+      security:
+      - openWeatherApiKey: [696253a0d17b6f0775f5bd8a01d5dd95]
+
+      responses:
+        '200':
+          description: Weather data retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nasa_power:
+                    type: object
+                  openweather:
+                    type: object
+
+  /srtm/{lat}/{lon}:
+    get:
+      summary: Get DEM Elevation
+      description: Returns elevation data from SRTM (Shuttle Radar Topography Mission).
+      parameters:
+        - name: lat
+          in: path
+          required: true
+          schema:
+            type: number
+          example: 20.5
+        - name: lon
+          in: path
+          required: true
+          schema:
+            type: number
+          example: 85.8
+      responses:
+        '200':
+          description: Elevation retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  elevation:
+                    type: number
+                    example: 75.3
+
+  /sensors/vibration:
+    get:
+      summary: Get Vibration Sensor Data
+      description: Simulated vibration sensor data from MQTT broker.
+      responses:
+        '200':
+          description: Vibration data retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  vibration:
+                    type: number
+                    example: 0.87
+
+  /predict:
+    post:
+      summary: Predict Rockfall Risk
+      description: Uses trained ML model to predict risk score.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                elevation:
+                  type: number
+                  example: 75.3
+                temperature:
+                  type: number
+                  example: 28.5
+                precipitation:
+                  type: number
+                  example: 5.2
+                wind_speed:
+                  type: number
+                  example: 2.3
+                vibration:
+                  type: number
+                  example: 0.8
+      responses:
+        '200':
+          description: Prediction result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  risk:
+                    type: string
+                    example: High
+                  probability:
+                    type: number
+                    example: 0.82

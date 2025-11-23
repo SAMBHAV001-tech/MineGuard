@@ -1,0 +1,35 @@
+# ---- Build essentials ----
+pip==24.2
+setuptools==70.0.0
+wheel==0.43.0
+
+# ---- Core dependencies ----
+fastapi==0.115.0
+uvicorn==0.30.0
+pydantic==2.11.1
+
+starlette==0.38.6
+
+# ---- Scientific stack ----
+numpy==1.24.4
+pandas==2.0.3
+scipy==1.10.1
+scikit-learn==1.3.0
+
+# ---- Sensor / MQTT ----
+paho-mqtt==2.1.0
+
+# ---- Geo / DEM handling ----
+rasterio==1.3.9
+affine==2.4.0
+snuggs==1.4.7
+cligj==0.7.2
+click==8.1.7
+click-plugins==1.1.1
+
+# ---- Utilities ----
+python-dotenv==1.0.1
+requests==2.32.3
+PyYAML==6.0.2
+typing-extensions==4.12.2
+tzdata==2024.1
