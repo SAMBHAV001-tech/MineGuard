@@ -1,0 +1,87 @@
+/* Custom animations and styles */
+.card-animate {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card-animate:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card-animate:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card-animate:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom button hover effects */
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Input focus effects */
+input:focus {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Card hover effects */
+.bg-white {
+    transition: all 0.3s ease-in-out;
+}
+
+.bg-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Risk level colors */
+.risk-low {
+    color: #10b981;
+}
+
+.risk-medium {
+    color: #f59e0b;
+}
+
+.risk-high {
+    color: #ef4444;
+}
+
+/* Loading animation */
+.loading {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Chart container */
+#vibrationChart {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 8px;
+}
