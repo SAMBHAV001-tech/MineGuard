@@ -1,0 +1,29 @@
+# === PYTHON BACKEND ===
+venv/
+__pycache__/
+*.pyc
+
+# === NODE FRONTEND ===
+mineguard_frontend/Mineguard/node_modules/
+mineguard_frontend/Mineguard/dist/
+mineguard_frontend/Mineguard/.vite/
+
+# === RENDER / DEPLOYMENT ===
+*.log
+.env
+.env.local
+.env.production
+
+# === EDITOR / SYSTEM ===
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === GIT IGNORE EXTRA ===
+# ignore python cache inside backend
+mineguard_backend/venv/
+mineguard_backend/__pycache__/
+
+# ignore lock files (optional)
+package-lock.json
+yarn.lock
