@@ -45,7 +45,10 @@ app.openapi = custom_openapi
 # ------------ CORS ------------ #
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow all during testing; restrict later
+    allow_origins=[
+        "*", 
+        "https://mine-guard-theta.vercel.app",
+      ],  # allow all during testing; restrict later
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
