@@ -2,7 +2,7 @@
 // ===============================
 // Backend API Configuration
 // ===============================
-const API_BASE_URL = 'https://mineguard-backend-1.onrender.com';
+const API_BASE_URL = 'https://mineguard-2p44.onrender.com';
 
 // Default fallback values
 const fallbackWeatherData = { temperature: 28, humidity: 60, rainfall: 2, wind_speed: 12 };
