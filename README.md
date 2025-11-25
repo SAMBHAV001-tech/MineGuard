@@ -120,7 +120,7 @@ http://localhost:5173/
 ## 🌐 Deployment
 
 Backend is deployed on Render.
-Frontend can be deployed on Netlify, Vercel, or any static host.
+Frontend is deployed on Vercel.
 
 ## 🤝 Contributors
 
@@ -132,5 +132,5 @@ Frontend can be deployed on Netlify, Vercel, or any static host.
 
 This project is open for learning & research use.
 
-## 📂 Project Structure
+
 
