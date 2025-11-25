@@ -124,8 +124,8 @@ Frontend is deployed on Vercel.
 
 ## 🤝 Contributors
 
-> Sambhav Das 
-> Soumit Sen
+> Sambhav Das, 
+> Soumit Sen,
 > Soumyajeet Satapathy
 
 ## 📜 License
