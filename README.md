@@ -122,7 +122,7 @@ http://localhost:5173/
 Backend is deployed on Render.
 Frontend is deployed on Vercel.
 
-Live at: https://mine-guard-50que895k-sambhav-das-projects.vercel.app/
+Live at: https://mine-guard-theta.vercel.app/ or https://mine-guard-50que895k-sambhav-das-projects.vercel.app/
 
 ## 🤝 Contributors
 
