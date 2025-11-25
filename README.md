@@ -3,7 +3,9 @@
 MineGuard is a real-time rockfall monitoring and risk-prediction system built using:
 - **Python (FastAPI)** for backend
 - **HTML, CSS, JS, Chart.js, Tailwind** for frontend
-- Custom lightweight **AI risk-scoring logic** 
+- Custom lightweight **AI risk-scoring logic**
+
+  Live at: https://mine-guard-theta.vercel.app/
 
 ---
 
